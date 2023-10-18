@@ -1,0 +1,75 @@
+
+
+一、环境软件安装：
+	1、Anaconda安装
+		(1) 安装链接：https://blog.csdn.net/m0_52307083/article/details/123391977
+		(2) anaconda各组件说明：https://www.pianshen.com/article/1460811125/
+		(3) anaconda虚拟环境说明及常用命令(弄清楚anaconda的虚拟环境有什么作用)：
+				https://www.cnblogs.com/yuehouse/p/10239195.html
+	注：百度搜索关键词：anaconda 安装教程
+
+
+	2、Pycharm安装：
+		(1) 下载免费社区版Community，想使用专业版的网上自行搜索：pycharm 破解
+				https://www.jetbrains.com/zh-cn/pycharm/download/#section=windows
+		(2) pycharm社区版安装教程(忽略解释器部分)：https://www.cnblogs.com/temari/p/13048977.html
+	注：百度搜索关键词：pycharm 安装教程
+
+
+二、深度学习环境配置
+	1、主要安装包版本要求，结合第(3)步链接使用安装命令(其他安装包缺啥装啥):
+		python:3.7.1          安装命令：conda create -n 虚拟环境名 python=3.7.1
+		tensorflow:1.15       安装命令：conda install tensorflow=1.15
+		keras:2.3.1           安装命令：conda install keras=2.3.1
+		pytorch:版本自己选定  安装命令：从pytorch官网选择复制
+			
+	2、Anaconda Prompt配置镜像源(加速包的安装)：
+		https://www.cnblogs.com/yirufeng/p/12242290.html
+
+	3、Anaconda Prompt安装tensorflow与pytorch教程：
+			https://t.1yb.co/AGKW
+		注意(很重要！！！)：
+			(1) 使用conda create -n 虚拟环境名 python=3.7.1创建的只是环境，哪怕虚拟环境名叫张三李四王二麻子都可以，
+				并不一定非要使用TensorFlow或者pytorch，也不是叫这两个名字就代表安装好了；
+			(2) 新环境创建好后得使用conda activate 新环境名 来激活，不然后续所有install的包都默认安装在base环境下的；
+			(3) 在新环境中使用conda install命令才是真正意义上安装tensorflow与pytorch的包，安装过程无报错则安装成功；
+			(4) conda info --env命令查看的是自己创建了哪些虚拟环境，有没有tf1、tf2、tensorflow、pytorch这些无所谓，
+				只关注自己指定的虚拟环境名是否存在即可。
+
+	4、Anaconda与PyCharm的"联姻"：
+			https://t.1yb.co/AGLq
+				
+	5、GPU版本TensorFlow或Pytorch(非必须，根据显卡能力配置)
+		想要安装cuda和cudnn的同学：
+			(1) 判断自己的显卡可不可以，例如GTX960mx，只要后面有mx的都不建议安装；mx250，mx350 同样不建议
+			(2) 如果自己的显卡在GTX1080ti或者更高版本，首先在conda环境中安装 gpu版本的tensorflow
+			(3) 在环境中conda list下，就会有你需要安装的cudnn与cuda版本软连接，去官网下载对应版本安装即可
+			
+			显卡驱动版本与CUDA的版本对应关系：https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+			TensorFlow与cuda版本对应关系：https://blog.csdn.net/weixin_43933981/article/details/118210873
+			Pytorch与cuda版本对应关系：https://blog.csdn.net/Williamcsj/article/details/123915652
+
+		TensorFlow使用gpu安装教程(供参考)：https://www.weixiuzhan.cn/news/show-18661.html
+		Pytorch使用gpu安装教程(供参考)：在pytorch官网复制安装命令时选择对应cuda版本就行
+		百度搜索安装关键词：自己显卡版本 tensorlfow/pytorch gpu
+		
+
+三、开课前预习资料推荐：
+	1、《动手学深度学习》(Pytorch版)
+		链接：https://tangshusen.me/Dive-into-DL-PyTorch/#/
+		学习目标：过眼理解1、3章，不需要弄懂pytorch代码
+	2、《统计学习方法》--李航
+		链接：网盘链接的learnBook里有
+		学习目标：过眼理解前3章即可（书籍找洪老师要即可）
+		
+
+四、学习资料推荐：
+1、面试题目
+《百面机器学习》、牛客网试题、leetcode
+2、参考资料
+《机器学习》——西瓜书（周志华）公式解释：南瓜书；统计学习方法——李航
+
+
+
+
+
