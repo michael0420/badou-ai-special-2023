@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 
 
 # 最邻近插值函数将图片放大2倍
-def function(image):
+def function(ImageSrc):
     # 获得原始图的高度,宽度和通道
-    height, width, channels = image.shape
+    height, width, channels = ImageSrc.shape
     image_empty = np.zeros(((height * 2), (height * 2), channels), np.uint8)
     sh = (height * 2) / height
     sw = (height * 2) / width
@@ -13,7 +13,7 @@ def function(image):
         for w in range(height * 2):
             height_new = int(h / sh)
             width_new = int(w / sw)
-            image_empty[h, w] = image[height_new, width_new]
+            image_empty[h, w] = ImageSrc[height_new, width_new]
     return image_empty
 
 
