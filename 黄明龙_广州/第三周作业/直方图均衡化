@@ -1,0 +1,49 @@
+import cv2
+import os
+import numpy as np
+
+img = cv2.imread('C:/Users/Administrator/Desktop/img3/img/1.jpg')
+gray_img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+#获取图片长和宽
+height,width = gray_img.shape[0],gray_img.shape[1]
+  
+#num_dict 存放图片中各个像素的值及其个数
+num_dict = {}
+for y in range(height):
+    for x in range(width):
+        num = gray_img[x,y]
+        if str(num) in num_dict.keys():
+            num_dict[str(num)] +=1
+        else:
+            num_dict.update({str(num):1})
+
+#对num_dict的key值进行排序 从小到大
+new_dict = {}
+for i in range(256):
+    if str(i) in num_dict.keys():
+        new_dict.update({str(i): num_dict[str(i)]})
+del num_dict
+print(new_dict)
+
+hist_out = height*width/256
+#映射直方图均衡化之后的dict
+relation_dict = {}
+temp_sum = 0
+for i in new_dict.keys():
+    temp_sum+=new_dict[i]
+    temp = int((temp_sum/hist_out) -1)
+    relation_dict.update({i:temp})
+print(relation_dict)
+
+new_img = np.zeros((width,height),img.dtype)
+for y in range(height):
+    for x in range(width):
+        num = gray_img[x,y]
+        if str(num) in relation_dict.keys():
+            new_img[x,y] = relation_dict[str(num)]
+
+hist_img = cv2.equalizeHist(gray_img)
+cv2.imshow("hist_img",hist_img)
+cv2.imshow("new_img",new_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
