@@ -1,0 +1,41 @@
+import random
+import cv2
+ 
+def add_noise(img,percentange,mu,sigma):
+    if len(img.shape) == 2:
+        channel_size =1
+    else:
+        channel_size =3
+ 
+    height,width = img.shape[0],img.shape[1]
+    num = int (height*width*percentange)
+    X_list = [random.randint(0,width-1) for i in range(num) ]
+    Y_list = [random.randint(0, height-1) for i in range(num)]
+ 
+    object_list = []
+    #判断是单通道还是多通道
+    if channel_size ==1:
+        object_list.append(img)
+    else:
+        b,g,r = img[:,:,0],img[:,:,1],img[:,:,2]
+        object_list = [b,g,r]
+ 
+    for channel,object in enumerate(object_list):
+        for i,x in enumerate(X_list):
+            y = Y_list[i]
+            a = random.gauss(mu,sigma)
+            object_list[channel][y, x] = int(object[y, x] + a)
+ 
+    if channel_size ==1:
+        return object_list[0]
+    else:
+        result = cv2.merge(object_list)
+        return result
+ 
+img_path = 'C:/Users/Administrator/Desktop/img/2.jpg'
+img = cv2.imread(img_path)
+cv2.imshow("img",img)
+img = add_noise(img,0.2,0,0.1)
+cv2.imshow("new_img",img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
