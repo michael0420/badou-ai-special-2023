@@ -2,6 +2,11 @@ import cv2
 import random
 
 
+"""
+@author: BraHitYQ
+salt and pepper noise(椒盐噪声)
+"""
+
 # 定义一个名为fun1的函数，接收两个参数：src（源图像）和percetage（噪声比例）。
 def fun1(src, percetage):
 		# 将源图像赋值给NoiseImg。
