@@ -2,6 +2,10 @@
 import cv2
 import random
 
+"""
+@author: BraHitYQ
+Gaussian noise(高斯噪声)
+"""
 
 def GaussianNoise(src, means, sigma, percetage):
         NoiseImg = src
