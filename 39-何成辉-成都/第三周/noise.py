@@ -1,6 +1,11 @@
 import cv2 as cv
 from skimage import util
 
+"""
+@author: BraHitYQ
+noise(噪声)
+"""
+
 '''
 def random_noise(image, mode='gaussian', seed=None, clip=True, **kwargs):
 功能：为浮点型图片添加各种随机噪声
