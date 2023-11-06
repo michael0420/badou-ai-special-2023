@@ -1,6 +1,11 @@
 import cv2
 from matplotlib import pyplot as plt
 
+"""
+@author: BraHitYQ
+Grayscale image histogram(灰度图像直方图)、Color image histogram(彩色图像直方图)
+"""
+
 '''
 第三方库的调用及参数解释：
 
