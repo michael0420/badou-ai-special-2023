@@ -27,3 +27,10 @@
   - sklean 函数实现pca主成分分析
 + pca_np.py
   - numpy 函数实现pca主成分分析
+## 05文件夹
++ Kmeans.py
+  - kmeans 方法实现lenna 图片分割
++ perspective_transformation.py
+  - 实现photo 图像的纸片识别，其中 主要是应用公式， 自己求解了透视变换 中的 变换矩阵。
++ 定点.py
+  - 记录老师的找图片点的代码
