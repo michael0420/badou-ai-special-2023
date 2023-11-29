@@ -1,2 +1,0 @@
-## This is my fourth assignment.
-  In this project, it mainly includes the Canny edge detection algorithm and the use of PCA principal component analysis to reduce the dimensionality of the input data matrix. Among them, I have fully implemented the construction of Canny edge detection algorithm and PCA algorithm from scratch. Of course, to meet the needs of the vast majority of people, I have also directly called Python third-party library files to complete the corresponding tasks.
