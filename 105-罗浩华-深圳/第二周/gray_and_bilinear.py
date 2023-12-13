@@ -1,4 +1,3 @@
-from skimage.color import rgb2gray
 import cv2
 import numpy as np
 from skimage.color import rgb2gray
