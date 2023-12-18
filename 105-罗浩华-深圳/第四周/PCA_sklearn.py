@@ -5,7 +5,7 @@ from sklearn.datasets import load_iris
 from sklearn.decomposition import PCA
 
 x, y = load_iris(return_X_y=True)
-# print(x,y)
+print(x)
 pca = PCA(n_components=0.93)
 pca.fit(x)
 newX = pca.fit_transform(x)
