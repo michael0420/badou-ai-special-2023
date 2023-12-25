@@ -41,3 +41,7 @@
 2.alexnet训练&推理
 3.vgg实现
 4.resnet实现
+
+第十一周 (已提交)
+1.实现inceptionV3
+2.实现mobilenet
