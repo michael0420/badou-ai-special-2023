@@ -50,7 +50,7 @@ enumerate()返回的是一个enumerate对象
 如果对一个列表，既要遍历索引又要遍历元素时，首先可以这样写：
 ```python
 list1 = ["这", "是", "一个", "测试"]
-for i in range (len(list1)):
+for i in range(len(list1)):
     print i ,list1[i]
 ```
 上述方法有些累赘，利用enumerate()会更加直接和优美：  
