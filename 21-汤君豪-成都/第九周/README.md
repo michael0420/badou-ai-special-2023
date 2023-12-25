@@ -30,8 +30,7 @@ array([[[1]],
 (3, 1, 1)
 ```
 ## np.random.normal(loc,scale,size）
-* np.random.normal(loc,scale,size）
-参数说明：
-loc:正太分布的均值
-scale:正太分布的标准差
-size:设定数组形状
+np.random.normal(loc,scale,size）参数说明：  
+* loc:正太分布的均值
+* scale:正太分布的标准差
+* size:设定数组形状
