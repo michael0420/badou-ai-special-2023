@@ -75,7 +75,7 @@ for index, item in enumerate(list1, 1):
 3 一个
 4 测试
 ```
-**补充**
+**补充**  
 如果要统计文件的行数，可以这样写：  
 ```python
 count = len(open(filepath, 'r').readlines())
