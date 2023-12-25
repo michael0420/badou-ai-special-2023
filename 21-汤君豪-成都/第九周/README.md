@@ -38,10 +38,24 @@ print s.name
 ```
 上面例子，父类对name和gender的初始化只是简单的赋值，但子类要求字母全部大写。
 ## torch.rand()和torch.randn()的区别
-1. torch.rand()：
-torch.rand() 用于生成元素值在 [0, 1) 之间均匀分布的随机张量。
-返回的张量中的每个元素都是从区间 [0, 1) 的均匀分布中随机采样得到的。
-示例：
+1. torch.rand()：  
+torch.rand() 用于生成元素值在 [0, 1) 之间均匀分布的随机张量。  
+返回的张量中的每个元素都是从区间 [0, 1) 的均匀分布中随机采样得到的。  
+示例：  
+```python
+import torch
+# 生成一个形状为 (2, 3) 的随机张量，值在 [0, 1) 的均匀分布中随机取样
+x = torch.rand(2, 3)
+```
+2. torch.randn()：  
+torch.randn() 用于生成元素值服从标准正态分布（均值为0，方差为1）的随机张量。  
+返回的张量中的每个元素都是从标准正态分布中随机采样得到的。
+```python
+import torch
+# 生成一个形状为 (2, 3) 的随机张量，值服从标准正态分布
+x = torch.randn(2, 3)
+```
+总的来说，torch.rand() 生成的张量中的元素值来自 [0, 1) 的均匀分布，而 torch.randn() 生成的张量中的元素值来自标准正态分布。因此，你可以根据需要选择合适的随机初始化方法。  
 ## numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)
 在指定的间隔内返回均匀间隔的数字。在[start, stop]这个区间的端点可以任意的被排除在外，默认包含端点；retstep=True时，显示间隔长度。  
 ## numpy.newaxis
