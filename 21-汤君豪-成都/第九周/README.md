@@ -37,7 +37,11 @@ print s.school
 print s.name
 ```
 上面例子，父类对name和gender的初始化只是简单的赋值，但子类要求字母全部大写。
-
+## torch.rand()和torch.randn()的区别
+1. torch.rand()：
+torch.rand() 用于生成元素值在 [0, 1) 之间均匀分布的随机张量。
+返回的张量中的每个元素都是从区间 [0, 1) 的均匀分布中随机采样得到的。
+示例：
 ## numpy.linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)
 在指定的间隔内返回均匀间隔的数字。在[start, stop]这个区间的端点可以任意的被排除在外，默认包含端点；retstep=True时，显示间隔长度。  
 ## numpy.newaxis
