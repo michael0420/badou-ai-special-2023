@@ -56,3 +56,15 @@
   - keras 实现深度神经网络
 + [neural_network_own_detail.py](08%2Fneural_network_own_detail.py)
   - 手动实现深度神经网络
+## 09文件夹
++ [teacher_code](10%2Fteacher_code)
+  - 使用pytorch 实现数字模型的训练和推理
++ [tf_net_demo.py](09%2Ftf_net_demo.py)
+  - tf简单实用
+## 10文件夹
++ [alexnet](10%2Falexnet)
+  - 实用keras框架实现 alexnet模型的训练和预测
++ [resnet50](10%2Fresnet50)
+  - 使用keras 框架实现 resnet50模型的预测
++ [vgg](10%2Fvgg)
+  - 使用tf 实现vgg16的预测
