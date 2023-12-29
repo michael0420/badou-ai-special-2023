@@ -36,3 +36,12 @@
 1.使用tf实现简单神经网络
 2.使用pytorch实现手写数字识别
 
+第十周 (已提交)
+1.cifar-10实例实现
+2.alexnet训练&推理
+3.vgg实现
+4.resnet实现
+
+第十一周 (已提交)
+1.实现inceptionV3
+2.实现mobilenet
